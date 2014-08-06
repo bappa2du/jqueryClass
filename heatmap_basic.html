@@ -22,19 +22,27 @@
 <script src="heatmap.js"></script>
 <script>
     window.onload = function() {
+
         // create a heatmap instance
+
         var heatmap = h337.create({
             container: document.getElementById('heatmapContainer'),
             maxOpacity: .6,
             radius: 50,
             blur: .90,
+
             // backgroundColor with alpha so you can see through it
+
             backgroundColor: 'rgba(0, 0, 58, 0.96)'
+
         });
+
         var heatmapContainer = document.getElementById('heatmapContainerWrapper');
 
         heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function(e) {
+
             // we need preventDefault for the touchmove
+
             e.preventDefault();
             var x = e.layerX;
             var y = e.layerY;
@@ -54,6 +62,7 @@
         };
 
     };
+
 </script>
 </body>
 </html
