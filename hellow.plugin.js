@@ -2,7 +2,9 @@
 
     $.fn.helloWorld = function() {
 
-        // Future home of "Hello, World!"
+        this.each( function() {
+            $(this).text("Hello, World!");
+        });
 
     }
 
