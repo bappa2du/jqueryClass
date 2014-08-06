@@ -1,8 +1,11 @@
-(function($) {
+(function($)
+{
 
-    $.fn.helloWorld = function() {
+    $.fn.helloWorld = function()
+    {
 
-        this.each( function() {
+        this.each( function()
+        {
             $(this).text("Hello, World!");
         });
 
