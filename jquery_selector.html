@@ -17,21 +17,27 @@
     <body>
 
     <input id="check1" type="checkbox" checked="checked">
-    <label for="check1">Check me</label>
+    <label for="check1" id="label1">Check me</label>
     <p></p>
 
     <script type="text/javascript" src="jquery.js"></script>
 
     <script type="text/javascript">
 
-        $( "input" )
-                .change(function() {
+        $( "input" ).change(function() {
                     var $input = $( this );
                     $( "p" ).html( ".attr( 'checked' ): " + $input.attr( "checked" ) + "" +
                             ".prop( 'checked' ): " + $input.prop( "checked" ) + "" +
                             ".is( ':checked' ): " + $input.is( ":checked" ) + "" );
                 })
                 .change();
+        $(document).ready(function()
+        {
+            //getter
+            console.log($('#label1').attr('for'));
+            //setter
+            ($('#label1').attr('for','bappa'));
+        });
 
     </script>
     </body>
