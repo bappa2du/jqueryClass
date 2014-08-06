@@ -2,37 +2,15 @@
 <html>
 <head>
     <title>jQuery HeatMap</title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
     <meta name="description" content="A heat map with jQuery" />
+
     <meta name="keywords" content="jquery, heatmap" />
-    <script type="text/javascript">
 
-        /**
-         *
-         * google analytics script start
-         *
-         */
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-7243260-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-        /**
-         *
-         * google analytics script end
-         *
-         */
-
-    </script>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+
     <style>
         *{
             margin:0;
@@ -70,13 +48,19 @@
             height:31px;
         }
     </style>
+
 </head>
+
 <body>
+
 <div class="title"></div>
-<div><a href="http://tympanus.net/codrops/2010/02/08/a-jquery-heat-map" class="back"></a></div>
+
 <span style="position:absolute" class="analyze" id="analyze">Analyze</span>
+
 <div class="overlay" id="overlay" style="display:none;"></div>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
 <script>
     $(function() {
         $(document).bind({
@@ -86,8 +70,8 @@
 
                 $('BODY').append($('<div/>', {
                     css: {
-                        left			: event.pageX-10,
-                        top				: event.pageY-10,
+                        left			: event.pageX,
+                        top				: event.pageY,
                         display			: 'none'
                     },
                     className			: 'dot',
@@ -112,6 +96,8 @@
         });
     });
 </script>
-<script src="http://tympanus.net/codrops/adpacks/demoad.js"></script>
+
+
+
 </body>
 </html>
